@@ -10,9 +10,9 @@ void buscaOrdenada(int arr[], int n, int value) {
         i++;
     }
     if (i < n && arr[i] == value) {
-        cout << "O valor " << value << " foi encontrado na posição " << i << endl;
+        cout << "O valor " << value << " foi encontrado na posicao " << i << endl;
     } else {
-        cout << "O valor " << value << " não foi encontrado na lista" << endl;
+        cout << "O valor " << value << " nao foi encontrado na lista" << endl;
     }
 }
 
