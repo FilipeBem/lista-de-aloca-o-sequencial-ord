@@ -17,6 +17,14 @@ void buscaOrdenada(int arr[], int n, int value) {
 }
 
 void insertSorted(int arr[], int& n, int value) {
+    
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == value) {
+            cout << "O valor " << value << " ja existe na lista" << endl;
+            return;
+        }
+    }
+    
     int i = n - 1;
     while (i >= 0 && arr[i] > value) {
         arr[i + 1] = arr[i];
@@ -24,6 +32,7 @@ void insertSorted(int arr[], int& n, int value) {
     }
     arr[i + 1] = value;
     n++;
+    cout << "O valor "<< value << " foi inserido na lista" << endl;
 }
 
 void remove(int arr[], int& n, int value) {
@@ -82,7 +91,6 @@ int main() {
                 cout << "Digite o valor a ser inserido: ";
                 cin >> valor;
                 insertSorted(arr, n, valor);
-                cout << "O valor " << valor << " foi inserido na lista" << endl;
                 break;
             case 3:
                 cout << "Digite o valor a ser removido: ";
